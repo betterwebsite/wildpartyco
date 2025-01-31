@@ -44,7 +44,6 @@
     content: "";
     opacity: 0.7;
     display: block;
-    background: #000;
     height: 100%;
     width: 100%;
     /* prevents the cursor from interacting with it */
@@ -189,7 +188,7 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
   #hero {
-    background: url("/assets/images/landing.jpg");
+    background: url("/assets/images/ohboy.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -236,13 +235,10 @@
     border-radius: 50%;
     margin: auto;
     margin-bottom: 1.4375em;
-    background: var(--primary);
-    height: 5.5em;
-    width: 5.5em;
   }
   .services .card picture img {
-    height: 3em;
-    width: 3em;
+    height: 100%;
+    width: 100%;
   }
   .services .card h2 {
     margin-bottom: 0.65em;
@@ -268,7 +264,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 98%;
+    width: 50%;
     font-size: min(1.8vw, 1em);
   }
   .services .card {
@@ -297,4 +293,336 @@
     font-weight: bold;
     color: #fff;
   }
+}
+.cs-button-solid:hover {
+  color: white !important;
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-2169 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2169 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 10vw, 8rem);
+  }
+  #sbsr-2169 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-2169 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+  #sbsr-2169 .cs-text:last-of-type {
+    /* 32px - 80px */
+    margin-bottom: clamp(2rem, 7vw, 5rem);
+  }
+  #sbsr-2169 .cs-picture {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2169 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-2169 .cs-image-group {
+    width: 100%;
+    /* 520px - 740px */
+    height: clamp(32.3125rem, 100vw, 46.25rem);
+    flex: none;
+    position: relative;
+    z-index: 1;
+    order: -1;
+  }
+  #sbsr-2169 .cs-picture1 {
+    /* 220px - 400px */
+    height: clamp(13.75rem, 30vw, 25rem);
+    max-height: 25rem;
+    border: clamp(4px, 2vw, 9px) solid #fff;
+  }
+  #sbsr-2169 .cs-picture2 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    /* changes to a clamp at tablet */
+    right: 2.5rem;
+    left: 0;
+    /* changes to clamp at tablet */
+    bottom: 3.4375rem;
+  }
+  #sbsr-2169 .cs-floater {
+    /* 80px - 170px */
+    width: clamp(5rem, 15vw, 10.625rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  #sbsr-2169 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-2169 .cs-background img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.16;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-2169 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #sbsr-2169 .cs-content {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbsr-2169 .cs-image-group {
+    width: 45vw;
+    max-width: 32.625rem;
+    height: auto;
+    margin-bottom: 3.125rem;
+    order: 2;
+  }
+  #sbsr-2169 .cs-picture2 {
+    /* 60px - 100px */
+    right: clamp(3.75rem, 10vw, 6.5rem);
+    /* 80px - 120px */
+    bottom: clamp(5rem, 9vw, 7.5rem);
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2220 {
+    padding: var(--sectionPadding);
+    background-color: #fdfaf8;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2220 .cs-container {
+    width: 100%;
+    /* changes to 1840px at tablet */
+    max-width: 44rem;
+    margin: auto;
+  }
+  #services-2220 .cs-title {
+    text-transform: uppercase;
+  }
+  #services-2220 .cs-card-group {
+    width: 100%;
+    /* changes to 100% at tablet */
+    max-width: 31.25rem;
+    margin: 0 auto;
+    padding: 0;
+    /* changes to flexbox at large desktop */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #services-2220 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    /* 240px - 300px */
+    min-height: clamp(15rem, 30vw, 18.75rem);
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 0;
+    /* clips the image corners */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+  }
+  #services-2220 .cs-item:hover .cs-h3,
+  #services-2220 .cs-item:focus-within .cs-h3 {
+    transform: translateY(-0.75rem);
+  }
+  #services-2220 .cs-item:hover .cs-background:before,
+  #services-2220 .cs-item:focus-within .cs-background:before {
+    height: 180%;
+  }
+  #services-2220 .cs-item:hover .cs-background img,
+  #services-2220 .cs-item:focus-within .cs-background img {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  #services-2220 .cs-link {
+    text-decoration: none;
+    height: 100%;
+    /* 16px - 24px */
+    padding: clamp(1rem, 1.25vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  #services-2220 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    transition: transform 0.3s, color 0.3s;
+  }
+  #services-2220 .cs-content {
+    text-align: center;
+    min-height: 0;
+    padding: 1.5rem;
+    background-color: #fbf5f1;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-2220 .cs-title {
+    margin: 0 0 2rem;
+  }
+  #services-2220 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: bold;
+    line-height: calc(50 / 16 * 1em);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: max-content;
+    padding: 0 calc(30 / 16 * 1rem);
+    background-color: var(--primary);
+    color: #000;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+  }
+  #services-2220 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #services-2220 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #services-2220 .cs-button-solid:before {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #services-2220 .cs-background {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-2220 .cs-background:before {
+    /* gradient overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 14.59%, rgba(0, 0, 0, 0) 43.18%);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: height 0.3s;
+  }
+  #services-2220 .cs-background img {
+    width: 100%;
+    height: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2220 .cs-container {
+    max-width: 115rem;
+  }
+  #services-2220 .cs-card-group {
+    max-width: 100%;
+    grid-template-rows: 1fr;
+  }
+  #services-2220 .cs-item {
+    grid-column: span 4;
+  }
+  #services-2220 .cs-item.cs-content {
+    grid-column: span 12;
+  }
+}
+/* Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+  #services-2220 .cs-card-group {
+    min-height: 37.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+  #services-2220 .cs-content {
+    min-width: 22rem;
+    padding: 9.75rem 0 12.5rem;
+  }
+}
+.lilita-one-regular {
+  font-family: "Lilita One", serif;
+  font-weight: 400;
+  font-style: normal;
 }

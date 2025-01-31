@@ -47,7 +47,7 @@
                 content: "";
                 opacity: 0.7;
                 display: block;
-                background: #000;
+                // background: #000;
                 height: 100%;
                 width: 100%;
                 /* prevents the cursor from interacting with it */
@@ -120,6 +120,7 @@
             height: initial;
             line-height: clamp(2.875em, 5.5vw, 3.5em);
         }
+
 
         .cs-button-transparent {
             z-index: 1;
@@ -207,7 +208,7 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
     #hero {
-        background: url("/assets/images/landing.jpg");
+        background: url("/assets/images/ohboy.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -262,13 +263,13 @@
                 border-radius: 50%;
                 margin: auto;
                 margin-bottom: (23/16em);
-                background: var(--primary);
-                height: (88/16em);
-                width: (88/16em);
+                // background: var(--primary);
+                // height: (88/16em);
+                // width: (88/16em);
 
                 img {
-                    height: (48/16em);
-                    width: (48/16em);
+                    height: 100%;
+                    width: 100%;
                 }
             }
             h2 {
@@ -298,7 +299,8 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 98%;
+        width: 50%;
+        // width: 98%;
         font-size: ~"min(1.8vw, 1em)";
 
         .card {
@@ -336,3 +338,393 @@
         }
     }
 }
+
+
+.cs-button-solid:hover {
+    color: white !important;
+}
+
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-2169 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 10vw, 8rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                /* 32px - 80px */
+                margin-bottom: clamp(2rem, 7vw, 5rem);
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            /* 520px - 740px */
+            height: clamp(32.3125rem, 100vw, 46.25rem);
+            flex: none;
+            position: relative;
+            z-index: 1;
+            order: -1;
+        }
+
+        .cs-picture1 {
+            /* 220px - 400px */
+            height: clamp(13.75rem, 30vw, 25rem);
+            max-height: (400/16rem);
+            border: clamp(4px, 2vw, 9px) solid #fff;
+        }
+
+        .cs-picture2 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            /* changes to a clamp at tablet */
+            right: (40/16rem);
+            left: 0;
+            /* changes to clamp at tablet */
+            bottom: (55/16rem);
+        }
+
+        .cs-floater {
+            /* 80px - 170px */
+            width: clamp(5rem, 15vw, 10.625rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: .16;
+                mix-blend-mode: darken;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbsr-2169 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-image-group {
+            width: 45vw;
+            max-width: (522/16rem);
+            height: auto;
+            margin-bottom: (50/16rem);
+            order: 2;
+        }
+
+        .cs-picture2 {
+            /* 60px - 100px */
+            right: clamp(3.75rem, 10vw, 6.5rem);
+            /* 80px - 120px */
+            bottom: clamp(5rem, 9vw, 7.5rem);
+        }
+    }
+}
+                                
+
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-2220 {
+        padding: var(--sectionPadding);
+        background-color: #fdfaf8;
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1840px at tablet */
+            max-width: (704/16rem);
+            margin: auto;
+        }
+
+        .cs-title {
+            text-transform: uppercase;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            /* changes to 100% at tablet */
+            max-width: (500/16rem);
+            margin: 0 auto;
+            padding: 0;
+            /* changes to flexbox at large desktop */
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 1.5vw, 1.25rem);
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            width: 100%;
+            /* 240px - 300px */
+            min-height: clamp(15rem, 30vw, 18.75rem);
+            margin: 0;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            padding: 0;
+            /* clips the image corners */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            grid-column: span 12;
+            grid-row: span 1;
+            position: relative;
+
+            &:hover,
+            &:focus-within {
+                .cs-h3 {
+                    transform: translateY(-0.75rem);
+                }
+
+                .cs-background {
+                    &:before {
+                        height: 180%;
+                    }
+                    img {
+                        opacity: 0.5;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            height: 100%;
+            /* 16px - 24px */
+            padding: clamp(1rem, 1.25vw, 1.5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .cs-content {
+            text-align: center;
+            min-height: 0;
+            padding: (24/16rem);
+            background-color: #fbf5f1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-title {
+            margin: 0 0 (32/16rem);
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            font-weight: bold;
+            line-height: calc(50 / 16 * 1em);
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            width: max-content;
+            padding: 0 calc(30 / 16 * 1rem);
+            background-color: var(--primary);
+            color: #000;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+
+            &:hover {
+                color: #fff;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                content: "";
+                width: 0;
+                height: 100%;
+                background-color: #000;
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* gradient overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 14.59%, rgba(0, 0, 0, 0) 43.18%);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: height 0.3s;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+                position: absolute;
+                z-index: -1;
+                transition: transform 0.6s, opacity 0.3s;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-2220 {
+        .cs-container {
+            max-width: (1840/16rem);
+        }
+
+        .cs-card-group {
+            max-width: 100%;
+            grid-template-rows: 1fr;
+        }
+
+        .cs-item {
+            grid-column: span 4;
+
+            &.cs-content {
+                grid-column: span 12;
+            }
+        }
+    }
+}
+
+/* Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+    #services-2220 {
+        .cs-card-group {
+            min-height: (600/16rem);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cs-content {
+            min-width: (352/16rem);
+            padding: (156/16rem) 0 (200/16rem);
+        }
+    }
+}
+                                
+
+.lilita-one-regular {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
